@@ -78,7 +78,7 @@ def squared(*number):
     return y
 
 
-#Write a Python function that takes two strings and returns True if they are anagrams, False otherwise.
+# Write a Python function that takes two strings and returns True if they are anagrams, False otherwise.
 def anagram(a,b):
     word = a.lower()
     word2 = b.lower()
@@ -90,6 +90,45 @@ def anagram(a,b):
     else:
         return ("False")
 
+def remove_second_last(a):
+    a.remove(a[-2])
+    return a
+#write a python function that has a list of days: 
+# [Monday, Tuesday, friday, monday] and counts the number of occurences of Monday.
+def number_of_occurences(list_of_days):
+    return list_of_days.count('Monday')
 
-     
+#Write a function that accepts an unsorted list of integers and 
+# finds the smalllest number in the list
+def find_smallest(unsorted_list):
+    unsorted_list.sort()
+    return unsorted_list[0]
 
+def divisible_by_seven():
+    empty = []
+    for i in range(100,200):
+        if i % 7 ==0:
+            empty.append(i)
+    print(empty)
+            # return empty
+
+#Write a program that takes in a list of numbers returns sum of even numbers nd 
+#product of odd numbers using the if else statement.
+def even_and_odd_numbers(numbers_list):
+    sum = 0
+    product = 1
+    for i in numbers_list:
+        if i%2 == 0:
+            sum += i
+        else:
+            product*=i
+    print("Sum of even numbers is",sum,)
+    print("The product is ",product)
+def check_against_ten(number1,number2):
+    sum = number1+number2
+    if sum<10:
+        print("Sum is Less than ten")
+    elif sum==10:
+        print('Sum is equal to ten')
+    elif sum>10:
+        print('greater than ten')
